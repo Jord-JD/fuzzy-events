@@ -28,11 +28,11 @@
     }
   },
   "replace": {
-    "jord-jd/fuzzy-events": "self.version"
+    "divineomega/fuzzy-events": "self.version"
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "2.0-dev"
+      "dev-master": "3.0-dev"
     }
   }
 }
