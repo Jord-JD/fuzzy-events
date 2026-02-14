@@ -1,10 +1,10 @@
 <?php
 
-namespace DivineOmega\FuzzyEvents\Unit;
+namespace JordJD\FuzzyEvents\Unit;
 
-use DivineOmega\FuzzyEvents\Exceptions\ConfidenceTooLowException;
-use DivineOmega\FuzzyEvents\FuzzyDispatcher;
-use DivineOmega\FuzzyEvents\TestClasses\Greeting;
+use JordJD\FuzzyEvents\Exceptions\ConfidenceTooLowException;
+use JordJD\FuzzyEvents\FuzzyDispatcher;
+use JordJD\FuzzyEvents\TestClasses\Greeting;
 use PHPUnit\Framework\TestCase;
 use InvalidArgumentException;
 

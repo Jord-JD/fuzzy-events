@@ -1,8 +1,8 @@
 <?php
 
-namespace DivineOmega\FuzzyEvents\TestClasses;
+namespace JordJD\FuzzyEvents\TestClasses;
 
-use DivineOmega\FuzzyEvents\Interfaces\FuzzyListenerInterface;
+use JordJD\FuzzyEvents\Interfaces\FuzzyListenerInterface;
 
 class Greeting implements FuzzyListenerInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace DivineOmega\FuzzyEvents\Interfaces;
+namespace JordJD\FuzzyEvents\Interfaces;
 
 interface FuzzyListenerInterface
 {

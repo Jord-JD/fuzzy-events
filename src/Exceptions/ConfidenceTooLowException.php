@@ -1,6 +1,6 @@
 <?php
 
-namespace DivineOmega\FuzzyEvents\Exceptions;
+namespace JordJD\FuzzyEvents\Exceptions;
 
 use Exception;
 

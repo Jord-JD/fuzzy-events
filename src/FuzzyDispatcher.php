@@ -1,9 +1,9 @@
 <?php
 
-namespace DivineOmega\FuzzyEvents;
+namespace JordJD\FuzzyEvents;
 
-use DivineOmega\FuzzyEvents\Exceptions\ConfidenceTooLowException;
-use DivineOmega\FuzzyEvents\Interfaces\FuzzyListenerInterface;
+use JordJD\FuzzyEvents\Exceptions\ConfidenceTooLowException;
+use JordJD\FuzzyEvents\Interfaces\FuzzyListenerInterface;
 use InvalidArgumentException;
 
 class FuzzyDispatcher
