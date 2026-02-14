@@ -18,13 +18,13 @@
   },
   "autoload": {
     "psr-4": {
-      "DivineOmega\\FuzzyEvents\\": "src/"
+      "JordJD\\FuzzyEvents\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "DivineOmega\\FuzzyEvents\\TestClasses\\": "tests/Unit/includes/TestClasses/",
-      "DivineOmega\\FuzzyEvents\\Unit\\": "tests/Unit/"
+      "JordJD\\FuzzyEvents\\TestClasses\\": "tests/Unit/includes/TestClasses/",
+      "JordJD\\FuzzyEvents\\Unit\\": "tests/Unit/"
     }
   },
   "replace": {
@@ -32,7 +32,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "3.0-dev"
+      "dev-master": "4.0-dev"
     }
   }
 }
