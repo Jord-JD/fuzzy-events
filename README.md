@@ -1,6 +1,6 @@
 # Fuzzy Events
 
-[![Build Status](https://travis-ci.com/DivineOmega/fuzzy-events.svg?branch=master)](https://travis-ci.com/DivineOmega/fuzzy-events)
+[![Build Status](https://travis-ci.com/Jord-JD/fuzzy-events.svg?branch=master)](https://travis-ci.com/Jord-JD/fuzzy-events)
 
 Fuzzy events is a PHP package that allows you to perform actions based on a 
 fuzzy string matches.
@@ -10,7 +10,7 @@ fuzzy string matches.
 Install using the following Composer command.
 
 ```bash
-composer require divineomega/fuzzy-events
+composer require jord-jd/fuzzy-events
 ```
 
 ### Usage
