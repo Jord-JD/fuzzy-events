@@ -1,6 +1,6 @@
 # Fuzzy Events
 
-[![Build Status](https://travis-ci.com/Jord-JD/fuzzy-events.svg?branch=master)](https://travis-ci.com/Jord-JD/fuzzy-events)
+[![Tests](https://github.com/Jord-JD/fuzzy-events/actions/workflows/tests.yml/badge.svg)](https://github.com/Jord-JD/fuzzy-events/actions/workflows/tests.yml)
 
 Fuzzy events is a PHP package that allows you to perform actions based on a 
 fuzzy string matches.
@@ -60,4 +60,22 @@ $confidences = $dispatcher->getConfidences('Hi!');
 // $confidences = [
 //    Greeting::class => 80
 // ]
+```
+
+## Ranked matches
+
+Use `getRankedConfidences()` when you want every candidate sorted from best to worst, or `getMatches()` to keep only candidates above the dispatcher's threshold (or an explicit minimum).
+
+```php
+$ranked = $dispatcher->getRankedConfidences('Hello');
+$matches = $dispatcher->getMatches('Hello');
+$strictMatches = $dispatcher->getMatches('Hello', 95);
+```
+
+Confidence and match thresholds must be between 0 and 100. Listener classes and phrases are validated when the dispatcher is constructed, so configuration errors fail before a query is handled.
+
+Matching remains case-sensitive by default. Pass `false` as the optional third constructor argument to compare case-insensitively.
+
+```php
+$dispatcher = new FuzzyDispatcher($listeners, 75, false);
 ```

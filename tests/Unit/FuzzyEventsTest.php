@@ -50,6 +50,20 @@ class FuzzyEventsTest extends TestCase
         new FuzzyDispatcher([], 75);
     }
 
+    public function testInvalidThresholdsAreRejected()
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        new FuzzyDispatcher([Greeting::class => ['Hello']], 101);
+    }
+
+    public function testInvalidListenerDefinitionsAreRejected()
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        new FuzzyDispatcher([\stdClass::class => ['Hello']], 75);
+    }
+
     public function testGetListener()
     {
         $listener = $this->getDispatcher()->getListener('Why hello there');
@@ -71,5 +85,21 @@ class FuzzyEventsTest extends TestCase
         $this->assertEquals([
             Greeting::class => 80
         ], $confidences);
+    }
+
+    public function testRankedMatchesCanBeFiltered()
+    {
+        $dispatcher = new FuzzyDispatcher([Greeting::class => ['Hello']], 70);
+
+        $this->assertSame([Greeting::class => 100.0], $dispatcher->getRankedConfidences('Hello'));
+        $this->assertSame([Greeting::class => 100.0], $dispatcher->getMatches('Hello'));
+        $this->assertSame([], $dispatcher->getMatches('Goodbye', 90));
+    }
+
+    public function testMatchingCanBeCaseInsensitive()
+    {
+        $dispatcher = new FuzzyDispatcher([Greeting::class => ['Hello']], 100, false);
+
+        $this->assertSame(Greeting::class, $dispatcher->getListenerClassName('hello'));
     }
 }
